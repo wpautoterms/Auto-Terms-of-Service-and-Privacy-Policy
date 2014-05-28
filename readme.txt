@@ -17,6 +17,8 @@ Puts your own information into a version of Automattic's <a href="http://en.word
 
 Disclaimer: <a href="http://tourkick.com/">Clifford Paulick of TourKick.com</a> is not an attorney. Additional disclaimer text within the plugin file(s).
 
+If you are a coder, you are welcome to view the plugin's code and submit pull requests: https://github.com/cliffordp/Auto-Terms-of-Service-and-Privacy-Policy
+
 == Installation ==
 
 After automatically installing to wp-content/plugins/ or manually installing to wp-content/mu-plugins/ (Must Use, i.e. Always Active), enter your organization's information in the plugin's settings page.
