@@ -1,8 +1,8 @@
 === Auto Terms of Service and Privacy Policy ===
 Contributors: cliffpaulick
-Tags: legal, policy, privacy, t&c, terms and conditions
-Requires at least: 3.0
-Tested up to: 3.9
+Tags: AdSense privacy policy, AdWords privacy policy, agreement, business, conditions, Digital Millennium Copyright Act, disclaimer, DMCA, documents, Facebook privacy policy, FB privacy policy, Google, HTML5, law, lawyer, legal, policy, privacy, privacy policy, refund, SEM, SEO, SMM, statement, T&C, terms, terms and conditions, terms of use, visitor tracking policy
+Requires at least: 3.1
+Tested up to: 4.3
 Stable tag: /trunk/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,14 @@ Put your own details into a modified version of Automattic's "Terms of Service" 
 
 Puts your own information into a version of Automattic's <a href="http://en.wordpress.com/tos/">Terms of Service</a> and <a href="http://automattic.com/privacy/">Privacy Policy</a>, both available under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Sharealike</a> license, that have been modified to exclude specifics to Automattic (like mentions of "JetPack", "WordPress.com", and "VIP") and have more generic language that can apply to most any site or service provider, including single sites, subscription sites, blog networks, and others.
 
-<strong>Enter your organization's information in the plugin's settings page. Then you can add your own page and use one of the 3 available shortcodes: [my_terms_of_service_and_privacy_policy], [my_terms_of_service], and/or [my_privacy_policy]
+<strong>Enter your organization's information in the plugin's settings page. Then you can add your own page and use one of the 3 available shortcodes: *[my_terms_of_service_and_privacy_policy]*, *[my_terms_of_service]*, and/or *[my_privacy_policy]*</strong>
+
+= Highlights =
+* Quick and easy setup in *wp-admin -> Settings -> Auto TOS & PP*
+* Just 3 simple shortcodes
+* No WP_DEBUG messages
+* Shortcode output is valid HTML 4.01 Strict and HTML 5 Experimental
+* Responsive plugin developer
 
 Disclaimer: <a href="http://tourkick.com/">Clifford Paulick of TourKick.com</a> is not an attorney. Additional disclaimer text within the plugin file(s).
 
@@ -38,17 +45,17 @@ As this plugin generates Terms of Service and Privacy Policy documents, which is
 
 MultiSite?
 
-Kinda... It Network Activates but doesn't show up under each site's list of intalled/available plugins. However, if they use the shortcode(s), the output will work.
+There aren't any multisite network settings. Must be activated and setup on each site individually.
 
 How can I give back?
 
-Please rate the plugin, Tweet about it (mention @TourKick if you'd like to give me warm fuzzies), contribute code enhancements, etc. I do not want monetary compensation for this particular project, but thank you for the thought.
+Please rate the plugin, Tweet about it (mention @TourKick if you'd like to give me warm fuzzies), contribute code enhancements, etc. I plan to release a premium version or add-ons. Once those become available, you can support this project by buying the ones useful to you.
 
 How do I add a "to the top" link?
 
-<a href="http://wordpress.org/extend/plugins/dynamic-to-top/" target="_blank">Dynamic "To Top" Plugin</a> is a good one that works site-wide, not just for this plugin. It might be a solution for you.
+One of these <a href="https://wordpress.org/plugins/tags/to-top/" target="_blank">"To Top" Plugins</a> may work for you. They're site-wide plugins, not anything specific to this Auto TOS & PP plugin.
 == Screenshots ==
-1. Administrator-only view of shortcode output before plugin has been customized or if On/Off setting is Off
+1. Administrator-only view of shortcode output before plugin has been customized or if On/Off setting is Off. Screenshot shows output of [my_terms_of_service_and_privacy_policy], [my_terms_of_service], and [my_privacy_policy]
 
 2. View of editing the plugin's settings
 
@@ -66,8 +73,26 @@ How do I add a "to the top" link?
 
 9. Scroll or Click to Privacy Policy when using [my_terms_of_service_and_privacy_policy] shortcode, further down the same page as the previous screenshot. Separated by horizontal line with class of "auto-tos-pp".
 == Changelog ==
-* WARNING: All direct plugin file edits (required in versions prior to v1.4) will be lost and will need to be entered via the plugin's settings page. Make sure you backup your information BEFORE UPDATING to a new version.
 * Changelog DIFFs for all versions are available at <a href="http://plugins.trac.wordpress.org/browser/auto-terms-of-service-and-privacy-policy/trunk" target="_blank">WordPress SVN</a>.
+= Version 1.6 =
+* April 27, 2015
+* Added filters: before and after TOS heading and PP heading; end of TOS and end of PP. Allows you to add custom text via Child Theme functions.php or a Functionality Plugin.
+* Refactored code (more OOP / use of functions).
+* Moved 'Back To Top' links to end of TOS and PP instead of immediately after each heading.
+* Changed TOS and PP main headings from 'h3' to 'h2'.
+* Replaced 'hr' with formatted 'div'. Override color and height of 1px black line by adding more specific CSS. For example, div.auto-tos-pp-separator{ border-bottom-color: green !important; border-bottom-width: 10px !important; }
+* Added HTML comment with plugin version number and which shortcode is used to assist with potential support requests.
+* Added protection from calling plugin PHP file directly.
+* WordPress compatibility version bump. Tested with WordPress version 4.3-alpha-32297
+* Added 'Upgrade Notice' section to plugin description.
+= Version 1.5 =
+* April 26, 2015
+* Shortcode output is now valid for both HTML 4.01 Strict and HTML 5. Changed anchor links from 'a name' to 'h3 id' to validate as HTML 5.
+= Version 1.4.4 =
+* April 20, 2015
+* WordPress compatibility version bump. Tested with WP version 4.2-RC1-32175.
+* Added greeting box to top of wp-admin Settings page.
+* Updated screenshot for the "coming soon" text.
 = Version 1.4.3 =
 * April 28, 2014
 * Fix for "Possessive Name" not displaying accurately in settings page due to apostrophe. However, the value with the apostrophe was saved properly, and the Possessive Name was displayed properly for users on the front-end.
@@ -94,3 +119,5 @@ How do I add a "to the top" link?
 * Fixed link anchor text to use the name specified in the settings, to fix the issue of displaying hard coded "Terms of Use" and "Privacy Policy" anchor text in the table of contents for the [my_terms_of_service_and_privacy_policy] shortcode.
 = Version: 1.0.2012.09.12 =
 * Initial release.
+== Upgrade Notice ==
+* WARNING: All direct plugin file edits (required in versions prior to v1.4) will be lost and will need to be entered via the plugin's settings page. Make sure you backup your information BEFORE UPDATING to a new version.
