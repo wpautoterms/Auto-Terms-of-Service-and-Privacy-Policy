@@ -2,7 +2,7 @@
 Contributors: cliffpaulick
 Tags: AdSense privacy policy, AdWords privacy policy, agreement, business, conditions, Digital Millennium Copyright Act, disclaimer, DMCA, documents, Facebook privacy policy, FB privacy policy, Google, HTML5, law, lawyer, legal, policy, privacy, privacy policy, refund, SEM, SEO, SMM, statement, T&C, terms, terms and conditions, terms of use, visitor tracking policy
 Requires at least: 3.1
-Tested up to: 4.3
+Tested up to: 4.3.1
 Stable tag: /trunk/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -74,6 +74,15 @@ One of these <a href="https://wordpress.org/plugins/tags/to-top/" target="_blank
 9. Scroll or Click to Privacy Policy when using [my_terms_of_service_and_privacy_policy] shortcode, further down the same page as the previous screenshot. Separated by horizontal line with class of "auto-tos-pp".
 == Changelog ==
 * Changelog DIFFs for all versions are available at <a href="http://plugins.trac.wordpress.org/browser/auto-terms-of-service-and-privacy-policy/trunk" target="_blank">WordPress SVN</a>.
+
+= Version 1.7 =
+* September 30, 2015
+* Now all plugin settings page fields can include apostrophes ('). Just don't use double-quotes (").
+* Added Text Domain to plugin's header
+* Updated plugin compatibility from WordPress 4.3 to 4.3.1
+= No Version Update =
+* September 14, 2015
+* Moved screenshot files from trunk to assets so .zip is smaller (i.e. faster updates and no actual plugin changes).
 = Version 1.6 =
 * April 27, 2015
 * Added filters: before and after TOS heading and PP heading; end of TOS and end of PP. Allows you to add custom text via Child Theme functions.php or a Functionality Plugin.

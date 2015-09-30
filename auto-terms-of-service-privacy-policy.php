@@ -3,7 +3,8 @@
 Plugin Name: Auto Terms of Service and Privacy Policy
 Plugin URI: https://wordpress.org/plugins/auto-terms-of-service-and-privacy-policy/
 Description: Puts your own information into a version of Automattic's <a href="http://en.wordpress.com/tos/">Terms of Service</a> and <a href="http://automattic.com/privacy/">Privacy Policy</a>, both available under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Sharealike</a> license, that have been modified to exclude specifics to Automattic (like mentions of "JetPack", "WordPress.com", and "VIP") and have more generic language that can apply to most any site or service provider, including single sites, subscription sites, blog networks, and others. <strong>Edit plugin's settings, then use one or more of the 3 available shortcodes: [my_terms_of_service_and_privacy_policy], [my_terms_of_service], and/or [my_privacy_policy]
-Version: 1.6
+Text Domain: auto-terms-of-service-and-privacy-policy
+Version: 1.7
 Author: TourKick (Clifford P)
 Author URI: http://twitter.com/TourKick
 License: GPL2 - http://codex.wordpress.org/Writing_a_Plugin#License
@@ -142,7 +143,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_tos_heading'])){
 			$tos_heading = $this->options['atospp_tos_heading'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_tos_heading]' type='text' value='{$tos_heading}'>";
+		printf( '<input name="atospp_plugin_options[atospp_tos_heading]" type="text" value="%s">', $tos_heading );
 	}
 
 	public function atospp_pp_heading_setting(){
@@ -150,7 +151,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_pp_heading'])){
 			$pp_heading = $this->options['atospp_pp_heading'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_pp_heading]' type='text' value='{$pp_heading}'>";
+		printf( '<input name="atospp_plugin_options[atospp_pp_heading]" type="text" value="%s">', $pp_heading );
 	}
 
 	public function atospp_namefull_setting(){
@@ -158,7 +159,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_namefull'])){
 			$namefull = $this->options['atospp_namefull'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_namefull]' type='text' value='{$namefull}'>";
+		printf( '<input name="atospp_plugin_options[atospp_namefull]" type="text" value="%s">', $namefull );
 	}
 
 	public function atospp_name_setting(){
@@ -166,7 +167,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_name'])){
 			$name = $this->options['atospp_name'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_name]' type='text' value='{$name}'>";
+		printf( '<input name="atospp_plugin_options[atospp_name]" type="text" value="%s">', $name );
 	}
 
 	public function atospp_namepossessive_setting(){
@@ -174,8 +175,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_namepossessive'])){
 			$namepossessive = $this->options['atospp_namepossessive'];
 		}
-		//" instead of ' because of apostrophe in possessive
-		echo '<input name="atospp_plugin_options[atospp_namepossessive]" type="text" value="'.$namepossessive.'">';
+		printf( '<input name="atospp_plugin_options[atospp_namepossessive]" type="text" value="%s">', $namepossessive );
 	}
 
 	public function atospp_domainname_setting(){
@@ -183,7 +183,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_domainname'])){
 			$domainname = $this->options['atospp_domainname'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_domainname]' type='text' value='{$domainname}'>";
+		printf( '<input name="atospp_plugin_options[atospp_domainname]" type="text" value="%s">', $domainname );
 	}
 
 	public function atospp_websiteurl_setting(){
@@ -191,7 +191,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_websiteurl'])){
 			$websiteurl = $this->options['atospp_websiteurl'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_websiteurl]' type='text' value='{$websiteurl}'>";
+		printf( '<input name="atospp_plugin_options[atospp_websiteurl]" type="text" value="%s">', $websiteurl );
 	}
 
 	public function atospp_minage_setting(){
@@ -199,7 +199,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_minage'])){
 			$minage = $this->options['atospp_minage'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_minage]' type='text' value='{$minage}'>";
+		printf( '<input name="atospp_plugin_options[atospp_minage]" type="text" value="%s">', $minage );
 	}
 
 	public function atospp_time_feesnotifications_setting(){
@@ -207,7 +207,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_time_feesnotifications'])){
 			$timefeesnotifications = $this->options['atospp_time_feesnotifications'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_time_feesnotifications]' type='text' value='{$timefeesnotifications}'>";
+		printf( '<input name="atospp_plugin_options[atospp_time_feesnotifications]" type="text" value="%s">', $timefeesnotifications );
 	}
 
 	public function atospp_time_replytopriorityemail_setting(){
@@ -215,7 +215,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_time_replytopriorityemail'])){
 			$timereplytopriorityemail = $this->options['atospp_time_replytopriorityemail'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_time_replytopriorityemail]' type='text' value='{$timereplytopriorityemail}'>";
+		printf( '<input name="atospp_plugin_options[atospp_time_replytopriorityemail]" type="text" value="%s">', $timereplytopriorityemail );
 	}
 
 	public function atospp_time_determiningmaxdamages_setting(){
@@ -223,7 +223,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_time_determiningmaxdamages'])){
 			$timedeterminingmaxdamages = $this->options['atospp_time_determiningmaxdamages'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_time_determiningmaxdamages]' type='text' value='{$timedeterminingmaxdamages}'>";
+		printf( '<input name="atospp_plugin_options[atospp_time_determiningmaxdamages]" type="text" value="%s">', $timedeterminingmaxdamages );
 	}
 
 	public function atospp_dmcanoticeurl_setting(){
@@ -231,7 +231,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_dmcanoticeurl'])){
 			$dmcanoticeurl = $this->options['atospp_dmcanoticeurl'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_dmcanoticeurl]' type='text' value='{$dmcanoticeurl}'>";
+		printf( '<input name="atospp_plugin_options[atospp_dmcanoticeurl]" type="text" value="%s">', $dmcanoticeurl );
 	}
 
 	public function atospp_venue_setting(){
@@ -239,7 +239,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_venue'])){
 			$venue = $this->options['atospp_venue'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_venue]' type='text' value='{$venue}'>";
+		printf( '<input name="atospp_plugin_options[atospp_venue]" type="text" value="%s">', $venue );
 	}
 
 	public function atospp_courtlocation_setting(){
@@ -247,7 +247,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_courtlocation'])){
 			$courtlocation = $this->options['atospp_courtlocation'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_courtlocation]' type='text' value='{$courtlocation}'>";
+		printf( '<input name="atospp_plugin_options[atospp_courtlocation]" type="text" value="%s">', $courtlocation );
 	}
 
 	public function atospp_arbitrationlocation_setting(){
@@ -255,7 +255,7 @@ class ATOSPP_Options{
 		if(!empty($this->options['atospp_arbitrationlocation'])){
 			$arbitrationlocation = $this->options['atospp_arbitrationlocation'];
 		}
-		echo "<input name='atospp_plugin_options[atospp_arbitrationlocation]' type='text' value='{$arbitrationlocation}'>";
+		printf( '<input name="atospp_plugin_options[atospp_arbitrationlocation]" type="text" value="%s">', $arbitrationlocation );
 	}
 
 
