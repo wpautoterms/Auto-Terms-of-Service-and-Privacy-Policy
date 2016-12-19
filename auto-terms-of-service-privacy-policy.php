@@ -2,9 +2,9 @@
 /*
 Plugin Name: Auto Terms of Service and Privacy Policy
 Plugin URI: https://wordpress.org/plugins/auto-terms-of-service-and-privacy-policy/
-Description: Puts your own information into a version of Automattic's <a href="http://en.wordpress.com/tos/">Terms of Service</a> and <a href="http://automattic.com/privacy/">Privacy Policy</a>, both available under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Sharealike</a> license, that have been modified to exclude specifics to Automattic (like mentions of "JetPack", "WordPress.com", and "VIP") and have more generic language that can apply to most any site or service provider, including single sites, subscription sites, blog networks, and others. <strong>Edit plugin's settings, then use one or more of the 3 available shortcodes: [my_terms_of_service_and_privacy_policy], [my_terms_of_service], and/or [my_privacy_policy]
+Description: Puts your own information into a version of Automattic's <a href="http://en.wordpress.com/tos/">Terms of Service</a> and <a href="http://automattic.com/privacy/">Privacy Policy</a>, both available under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Sharealike</a> license, that have been modified to exclude specifics to Automattic (like mentions of "JetPack", "WordPress.com", and "VIP") and have more generic language that can apply to most any site or service provider, including single sites, subscription sites, blog networks, and others. <strong>Edit plugin's settings, then use one or more of the 3 available shortcodes: [my_terms_of_service_and_privacy_policy], [my_terms_of_service], and/or [my_privacy_policy]</strong>
 Text Domain: auto-terms-of-service-and-privacy-policy
-Version: 1.7
+Version: 1.8
 Author: TourKick (Clifford P)
 Author URI: http://twitter.com/TourKick
 License: GPL2 - http://codex.wordpress.org/Writing_a_Plugin#License
@@ -31,6 +31,77 @@ if(!defined('TCPP_PLUGIN_URL')) {
 	define('TCPP_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 }
 
+
+// START Freemius
+// Create a helper function for easy SDK access.
+function tk_auto_terms_freemius() {
+    global $tk_auto_terms_freemius;
+
+    if ( ! isset( $tk_auto_terms_freemius ) ) {
+        // Include Freemius SDK.
+        require_once dirname(__FILE__) . '/freemius/start.php';
+
+        $tk_auto_terms_freemius = fs_dynamic_init( array(
+            'id'                => '78',
+            'slug'              => 'auto-terms-of-service-and-privacy-policy',
+            'type'              => 'plugin',
+            'public_key'        => 'pk_d9ea0af03f0660769f7de48a9f664',
+            'is_premium'        => false,
+            'has_addons'        => false,
+            'has_paid_plans'    => false,
+            'menu'              => array(
+                'slug'       => 'auto-terms-of-service-and-privacy-policy/auto-terms-of-service-privacy-policy.php',
+                'parent'     => array(
+                    'slug' => 'options-general.php',
+                ),
+            ),
+        ) );
+    }
+
+    return $tk_auto_terms_freemius;
+}
+
+// Init Freemius.
+tk_auto_terms_freemius();
+
+
+function tk_auto_terms_freemius_agreement_text() {
+	return sprintf( __( 'By using this plugin, you agree to %s and %s Terms.', 'auto-terms-of-service-and-privacy-policy' ),
+		'<a target="_blank" href="http://tourkick.com/terms/?utm_source=terms_agreement_text&utm_medium=free-plugin&utm_term=Auto%20Terms%20plugin&utm_campaign=WP%20Auto%20Terms">TourKick\'s</a>',
+		'<a target="_blank" href="https://freemius.com/terms/">Freemius\'</a>'
+	);
+}
+
+
+// Freemius: customize the new user message
+/* Default text:
+Please help us improve Auto Terms of Service and Privacy Policy! If you opt-in, some data about your usage of Auto Terms of Service and Privacy Policy will be sent to freemius.com. If you skip this, that's okay! Auto Terms of Service and Privacy Policy will still work just fine.
+*/
+function tk_auto_terms_freemius_custom_connect_message(
+	$message,
+	$user_first_name,
+	$plugin_title,
+	$user_login,
+	$site_link,
+	$freemius_link
+) {
+	$tk_custom_message = sprintf(
+			__fs( 'hey-x' ) . '<br><br>' . __( 'The <strong>%2$s</strong> plugin is ready to go! Want to help make %2$s more awesome? Securely share some data to get the best experience and stay informed.', 'auto-terms-of-service-and-privacy-policy' ),
+			$user_first_name,
+			$plugin_title,
+			'<strong>' . $user_login . '</strong>',
+			$site_link,
+			$freemius_link
+	);
+	
+	$tk_custom_message .= '<br><small>' . tk_auto_terms_freemius_agreement_text() . '</small>';
+	
+	return $tk_custom_message;
+}
+tk_auto_terms_freemius()->add_filter( 'connect_message', 'tk_auto_terms_freemius_custom_connect_message', 10, 6 );
+
+
+// END Freemius
 
 
 // Add settings link on plugin page from http://bavotasan.com/2009/a-settings-link-for-your-wordpress-plugins/
@@ -87,7 +158,7 @@ class ATOSPP_Options{
 	public function settings_page_greetbox(){
 		$tourkicklogo = plugins_url('images/tourkick-logo-square-300.png', __FILE__);
 		$tourkicklogo = str_replace('http:', '', $tourkicklogo); //protocol-relative to make sure it works if wp-admin is HTTPS
-		$tourkicklogo = sprintf('<a href="http://tourkick.com/" target="_blank"><img style="float: left; margin: 5px 40px 10px 10px;" width="100" height="100" src=\'%s\'></a>', $tourkicklogo);
+		$tourkicklogo = sprintf('<a href="http://wpautoterms.com/" target="_blank"><img style="float: left; margin: 5px 40px 10px 10px;" width="100" height="100" src=\'%s\'></a>', $tourkicklogo);
 		$displaytop = '<div style="width: 80%; padding: 20px; margin: 20px; background-color: #fff;">';
 		$displaytop .= $tourkicklogo;
 		$displaytop .= '<h2><a href="http://b.tourkick.com/atospp-rate-5-stars" target="_blank">Leave a Review</a>
