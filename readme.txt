@@ -87,6 +87,7 @@ One of these <a href="https://wordpress.org/plugins/tags/to-top/" target="_blank
 
 = Version 1.8.1 =
 * May 15, 2017
+* Update Freemius from version 1.2.1.5 to 1.2.1.6.1
 * Changed license from "GPL version 2 or any later version" to "GPL version 3 or any later version". See https://www.gnu.org/licenses/rms-why-gplv3.html and https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/ for details.
 
 = Version 1.8 =
