@@ -7,7 +7,7 @@ Text Domain: auto-terms-of-service-and-privacy-policy
 Version: 1.8.1
 Author: TourKick (Clifford P)
 Author URI: http://twitter.com/TourKick
-License: GPL version 2 or any later version
+License: GPL version 3 or any later version
 */
 /*
 WARNING: I'm human. I'm not perfect. Neither are you. Neither is this...
