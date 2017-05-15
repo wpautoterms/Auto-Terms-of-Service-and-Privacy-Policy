@@ -1,6 +1,6 @@
 === Auto Terms of Service and Privacy Policy ===
 Contributors: cliffpaulick
-Tags: Terms and Conditions, Terms of Use, Privacy Policy, legal, comments, Facebook, Google, cookie, ads, advertising, AdWords, analytics, retargeting, law, lawyer, visitor tracking policy, compliance, affiliate
+Tags: Terms and Conditions, Terms of Use, Privacy Policy, legal, comments, Facebook, Google, cookie, ads, analytics, compliance, affiliate
 Requires at least: 3.1
 Tested up to: 4.7.4
 Stable tag: 1.8.1
