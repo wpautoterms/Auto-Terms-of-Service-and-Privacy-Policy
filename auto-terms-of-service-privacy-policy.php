@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Auto Terms of Service and Privacy Policy
-Plugin URI: https://wordpress.org/plugins/auto-terms-of-service-and-privacy-policy/
+Plugin URI: http://www.wpautoterms.com/
 Description: Puts your own information into a version of Automattic's <a href="http://en.wordpress.com/tos/">Terms of Service</a> and <a href="http://automattic.com/privacy/">Privacy Policy</a>, both available under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Sharealike</a> license, that have been modified to exclude specifics to Automattic (like mentions of "JetPack", "WordPress.com", and "VIP") and have more generic language that can apply to most any site or service provider, including single sites, subscription sites, blog networks, and others. <strong>Edit plugin's settings, then use one or more of the 3 available shortcodes: [my_terms_of_service_and_privacy_policy], [my_terms_of_service], and/or [my_privacy_policy]</strong>
 Text Domain: auto-terms-of-service-and-privacy-policy
 Version: 1.8.1
 Author: TourKick (Clifford P)
-Author URI: http://twitter.com/TourKick
+Author URI: http://www.wpautoterms.com/
 License: GPL version 3 or any later version
 */
 /*
