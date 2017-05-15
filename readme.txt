@@ -5,7 +5,7 @@ Requires at least: 3.1
 Tested up to: 4.7
 Stable tag: /trunk/
 License: GPL version 3 or any later version
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Put your own details into a modified version of Automattic's "Terms of Service" and "Privacy Policy". 3 shortcodes available.
 
