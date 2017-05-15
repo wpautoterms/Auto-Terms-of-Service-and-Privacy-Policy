@@ -4,7 +4,7 @@ Tags: AdSense privacy policy, AdWords privacy policy, agreement, business, condi
 Requires at least: 3.1
 Tested up to: 4.7
 Stable tag: /trunk/
-License: GPLv2 or later
+License: GPL version 2 or any later version
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Put your own details into a modified version of Automattic's "Terms of Service" and "Privacy Policy". 3 shortcodes available.
@@ -84,6 +84,10 @@ One of these <a href="https://wordpress.org/plugins/tags/to-top/" target="_blank
 
 == Changelog ==
 * Changelog DIFFs for all versions are available at <a href="http://plugins.trac.wordpress.org/browser/auto-terms-of-service-and-privacy-policy/trunk" target="_blank">WordPress SVN</a>.
+
+= Version 1.8.1 =
+* May 15, 2017
+* Changed license from "GPL version 2 or any later version" to "GPL version 3 or any later version". See https://www.gnu.org/licenses/rms-why-gplv3.html and https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/ for details.
 
 = Version 1.8 =
 * December 19, 2016
