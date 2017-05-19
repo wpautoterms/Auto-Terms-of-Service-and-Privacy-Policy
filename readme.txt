@@ -1,6 +1,6 @@
 === Auto Terms of Service and Privacy Policy ===
-Contributors: cliffpaulick
-Tags: Terms and Conditions, Terms of Use, Privacy Policy, legal, comments, Facebook, Google, cookie, ads, analytics, compliance, affiliate
+Contributors: cliffpaulick, freemius
+Tags: comments, legal, terms and conditions, privacy policy, Facebook, Google, cookies, compliance, affiliate
 Requires at least: 3.1
 Tested up to: 4.7.4
 Stable tag: 1.8.1
@@ -31,7 +31,7 @@ Puts your own information into a version of Automattic's <a href="http://en.word
 
 Disclaimer: <a href="http://wpautoterms.com/">Clifford Paulick of TourKick.com</a> is not an attorney. Additional disclaimer text within the plugin file(s).
 
-If you are a coder, you are welcome to view the plugin's code and submit pull requests: https://github.com/cliffordp/Auto-Terms-of-Service-and-Privacy-Policy
+If you are a coder, you are welcome to view the plugin's code and submit pull requests: <a href="https://github.com/cliffordp/Auto-Terms-of-Service-and-Privacy-Policy">https://github.com/cliffordp/Auto-Terms-of-Service-and-Privacy-Policy</a>
 
 == Installation ==
 
@@ -88,7 +88,7 @@ One of these <a href="https://wordpress.org/plugins/tags/to-top/" target="_blank
 = Version 1.8.1 =
 * May 15, 2017
 * Update Freemius from version 1.2.1.5 to 1.2.1.6.1
-* Changed license from "GPL version 2 or any later version" to "GPL version 3 or any later version". See https://www.gnu.org/licenses/rms-why-gplv3.html and https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/ for details.
+* Changed license from "GPL version 2 or any later version" to "GPL version 3 or any later version". See <a href="https://www.gnu.org/licenses/rms-why-gplv3.html">GNU.org's Why Upgrade to GPLv3</a> and <a href="https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses/">Creative Commons' Compatible Licenses</a> for details.
 
 = Version 1.8 =
 * December 19, 2016
