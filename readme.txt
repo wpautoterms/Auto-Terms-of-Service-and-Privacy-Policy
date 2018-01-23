@@ -1,9 +1,9 @@
 === Auto Terms of Service and Privacy Policy ===
-Contributors: cliffpaulick, freemius
+Contributors: wpautoterms, freemius
 Tags: comments, legal, terms and conditions, privacy policy, Facebook, Google, cookies, compliance, affiliate
 Requires at least: 3.1
-Tested up to: 4.7.4
-Stable tag: 1.8.1
+Tested up to: 4.9.1
+Stable tag: 1.8.2
 License: GPL version 3 or any later version
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -29,9 +29,9 @@ Puts your own information into a version of Automattic's <a href="http://en.word
 * <strong>This plugin will eventually offer paid add-ons. I have some ideas of what I think you will want and benefit from, but I'd really love to hear your ideas!</strong> (If shared with me, they become all mine without attribution or compensation required, so thanks in advance!)
 * This plugin and its author are not affiliated with or endorsed by Automattic Inc.
 
-Disclaimer: <a href="http://wpautoterms.com/">Clifford Paulick of TourKick.com</a> is not an attorney. Additional disclaimer text within the plugin file(s).
+Disclaimer: Legal information is not legal advice. Additional disclaimer text within the plugin file(s).
 
-If you are a coder, you are welcome to view the plugin's code and submit pull requests: <a href="https://github.com/cliffordp/Auto-Terms-of-Service-and-Privacy-Policy">https://github.com/cliffordp/Auto-Terms-of-Service-and-Privacy-Policy</a>
+If you are a coder, you are welcome to view the plugin's code and submit pull requests: <a href="https://github.com/wpautoterms/Auto-Terms-of-Service-and-Privacy-Policy">https://github.com/wpautoterms/Auto-Terms-of-Service-and-Privacy-Policy</a>
 
 == Installation ==
 
@@ -84,6 +84,10 @@ One of these <a href="https://wordpress.org/plugins/tags/to-top/" target="_blank
 
 == Changelog ==
 * Changelog DIFFs for all versions are available at <a href="http://plugins.trac.wordpress.org/browser/auto-terms-of-service-and-privacy-policy/trunk" target="_blank">WordPress SVN</a>.
+
+= Version 1.8.2 =
+* Jan 23, 2017
+* Update README
 
 = Version 1.8.1 =
 * May 15, 2017

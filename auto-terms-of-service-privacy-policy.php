@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Auto Terms of Service and Privacy Policy
-Plugin URI: http://www.wpautoterms.com/
+Plugin URI: http://wpautoterms.com/
 Description: Puts your own information into a version of Automattic's <a href="http://en.wordpress.com/tos/">Terms of Service</a> and <a href="http://automattic.com/privacy/">Privacy Policy</a>, both available under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Sharealike</a> license, that have been modified to exclude specifics to Automattic (like mentions of "JetPack", "WordPress.com", and "VIP") and have more generic language that can apply to most any site or service provider, including single sites, subscription sites, blog networks, and others. <strong>Edit plugin's settings, then use one or more of the 3 available shortcodes: [my_terms_of_service_and_privacy_policy], [my_terms_of_service], and/or [my_privacy_policy]</strong>
 Text Domain: auto-terms-of-service-and-privacy-policy
-Version: 1.8.1
-Author: TourKick (Clifford P)
-Author URI: http://www.wpautoterms.com/
+Version: 1.8.2
+Author: WPAutoTerms
+Author URI: http://wpautoterms.com/
 License: GPL version 3 or any later version
 */
 /*
@@ -14,8 +14,7 @@ WARNING: I'm human. I'm not perfect. Neither are you. Neither is this...
 But hopefully it's more good than bad.
 */
 /*
-DISCLAIMER: I am not an attorney. I am not liable for any content, code, or other errors or omissions or inaccuracies. This plugin provides no warranties or guarantees. Do not rely on me to update the plugin ever. USE AT YOUR OWN RISK. I am not liable if Automattic removes their permission to use and adapt their work or if this plugin blows you or your website up or does anything negative. Finally, it needs to be said: READ YOUR OWN TERMS OF SERVICE AND PRIVACY POLICY BEFORE PUBLISHING. If you do not like Automattic's version, simply replacing their info with yours, maybe this plugin is not for you.
--Clifford Paulick and/or TourKick LLC
+DISCLAIMER: We are not attorneys. We are not liable for any content, code, or other errors or omissions or inaccuracies. This plugin provides no warranties or guarantees. USE AT YOUR OWN RISK. I am not liable if Automattic removes their permission to use and adapt their work or if this plugin blows you or your website up or does anything negative. Finally, it needs to be said: READ YOUR OWN TERMS OF SERVICE AND PRIVACY POLICY BEFORE PUBLISHING. If you do not like Automattic's version, simply replacing their info with yours, maybe this plugin is not for you.
 */
 
 
